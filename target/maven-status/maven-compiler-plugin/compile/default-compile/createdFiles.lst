@@ -1,0 +1,4 @@
+datos\Conexion.class
+dominio\Tarea.class
+web\ServletControlador.class
+datos\TareaDaoJDBC.class

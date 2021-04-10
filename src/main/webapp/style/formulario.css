@@ -1,0 +1,32 @@
+.contenedor-formulario{
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.formulario{
+    background-color: red;
+    width: 60%;
+}
+
+.margen-1{ margin: 0.25rem }
+.margen-1-y{ margin: 0.25rem 0}
+.margen-1-x{ margin: 0 0.25rem}
+.margen-2{ margin: 0.5rem }
+
+.input-ch{
+    width: 25%;
+}
+
+.input-md{
+    width: 50%;
+}
+
+.input-grande{
+    width: 100%;
+}
+
+.campo{
+    padding: 0.25rem 0.5rem;
+}
+

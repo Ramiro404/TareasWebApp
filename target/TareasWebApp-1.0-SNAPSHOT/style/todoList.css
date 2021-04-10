@@ -1,0 +1,135 @@
+:root{
+    --accent: #1492E6;
+    --danger: #FF0038;
+}
+
+*{
+    font-family: "Segoe UI";
+
+}
+
+
+
+.contenedor{
+    display: block;
+    margin: 1rem auto;
+}
+
+listado-tareas{
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.tarea{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0.25rem 0;
+}
+
+.tarea__finalizada{
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.tarea__contenido{
+    width: 65%;
+}
+
+.tarea__acciones{
+    width: 25%;
+    display: flex;
+    /*align-items: center;*/
+    align-content: center;
+    justify-content: space-between;
+}
+
+/* Botones */
+
+.btn{
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+}
+
+.btn-editar{
+    color: var(--accent);
+}
+
+.btn-eliminar{
+    color: var(--danger);
+}
+
+.btn-normal{
+    color: black;
+}
+
+/* Checkbox personalizado*/
+
+.contenedor-check{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 3rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.contenedor-check input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3rem;
+    width: 3rem;
+    background-color: #eee;
+}
+
+.contenedor-check:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.contenedor-check  input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.contenedor-check  input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.contenedor-check  .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
